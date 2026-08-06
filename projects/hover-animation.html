@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Animation - Demo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .back-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: white;
+            color: #1e3c72;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            z-index: 100;
+        }
+
+        .back-btn:hover {
+            background: #1e3c72;
+            color: white;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 60px auto 40px;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .hover-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        /* Card 1 - Scale */
+        .card-1:hover {
+            transform: scale(1.1);
+        }
+
+        /* Card 2 - Rotate */
+        .card-2:hover {
+            transform: rotate(5deg);
+        }
+
+        /* Card 3 - Color Change */
+        .card-3 {
+            background: #667eea;
+            color: white;
+        }
+
+        .card-3:hover {
+            background: #f5576c;
+        }
+
+        /* Card 4 - Shadow */
+        .card-4:hover {
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Card 5 - Slide Up */
+        .card-5:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Card 6 - Border */
+        .card-6 {
+            border: 3px solid transparent;
+        }
+
+        .card-6:hover {
+            border-color: #ffd700;
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .card-description {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .cards-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html#projects" class="back-btn">
+        <i class="fas fa-arrow-left"></i> Back to Portfolio
+    </a>
+
+    <div class="container">
+        <h1>Hover Animation Demo</h1>
+
+        <div class="cards-grid">
+            <div class="hover-card card-1">
+                <div class="card-icon">🎯</div>
+                <div class="card-title">Scale Effect</div>
+                <div class="card-description">Hover to see scale</div>
+            </div>
+
+            <div class="hover-card card-2">
+                <div class="card-icon">🔄</div>
+                <div class="card-title">Rotate Effect</div>
+                <div class="card-description">Hover to rotate</div>
+            </div>
+
+            <div class="hover-card card-3">
+                <div class="card-icon">🌈</div>
+                <div class="card-title">Color Change</div>
+                <div class="card-description">Hover to change color</div>
+            </div>
+
+            <div class="hover-card card-4">
+                <div class="card-icon">💫</div>
+                <div class="card-title">Shadow Effect</div>
+                <div class="card-description">Hover to see shadow</div>
+            </div>
+
+            <div class="hover-card card-5">
+                <div class="card-icon">⬆️</div>
+                <div class="card-title">Slide Up</div>
+                <div class="card-description">Hover to slide up</div>
+            </div>
+
+            <div class="hover-card card-6">
+                <div class="card-icon">⚡</div>
+                <div class="card-title">Border Effect</div>
+                <div class="card-description">Hover to see border</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
